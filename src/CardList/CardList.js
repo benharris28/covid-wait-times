@@ -1,11 +1,19 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
+import WaitForm from '../WaitForm/WaitForm'
 import { Layout, Button, Collapse } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 
 class CardList extends React.Component {
     
+    state = {
+
+    }
+
+    componentDidMount = () => {
+
+    }
     
     render() {
         const { Panel } = Collapse;
@@ -69,28 +77,11 @@ class CardList extends React.Component {
         
         return (
             <div className="card-list">
-                 <div className="content-section light-grey">
-                        <div className="content-container">
-
-                            <div className="title-centre">
-                            <div className="guide-heading">
-                            Wait Times
-                            </div>
-                                
-                 
-                                <h1 className="display-heading">
-                                    COVID-19 Assessment Center Wait Times
-                            </h1>
-                                <div className="hero-details">
-                                Live wait times are displayed below. They are updated hourly
-                        </div>
+             
 
 
+                       
 
-                            </div>
-
-                        </div>
-                    </div>
                 <div className="content-section">
                     <div className="content-container">
                         

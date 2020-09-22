@@ -224,6 +224,62 @@ font-weight: 400;
   transition: all .3s;
 
 }
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.select-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 24px;
+}
+
+.wait-time-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.wait-input {
+  margin-top: 20px;
+}
+
+.ant-input-number {
+  width: 200px;
+  height: 40px;
+}
+
+.button-box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.low-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .more-detail-panel {
   padding: 10px;
@@ -239,6 +295,18 @@ font-weight: 400;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.form-label {
+  font-size: 25px;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: .5px;
+    color: #212a2f;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 
 .shadow-box {
