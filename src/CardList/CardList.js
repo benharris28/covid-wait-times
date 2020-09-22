@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom'
 class CardList extends React.Component {
     
     state = {
+        waitTimes: this.props.waits
 
     }
 
-    componentDidMount = () => {
+   
 
-    }
-    
     render() {
         const { Panel } = Collapse;
+        const {waitTimes} = this.state;
         const dropdownIcon = <PlusCircleOutlined />
         
         const sampleData = [

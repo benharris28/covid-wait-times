@@ -2,8 +2,22 @@ import React from 'react';
 import './App.css';
 import CardList from './CardList/CardList'
 import WaitForm from './WaitForm/WaitForm'
+import WaitApiService from './services/wait-api-service';
 
 class App extends React.Component {
+  state = {
+    waits: ''
+  }
+
+  componentDidMount = () => {
+    WaitApiService.getAllWaits()
+       
+        .then(waits => {
+          this.setWalks(waits)
+        
+        })
+  }
+
   render() {
     return (
       <div className="app">
@@ -31,7 +45,7 @@ class App extends React.Component {
                     </div>
                     <WaitForm />
              
-                  <CardList />
+                  <CardList waits={this.state.waits}/>
       </div>
     )
   }
