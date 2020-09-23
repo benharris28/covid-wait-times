@@ -1,5 +1,5 @@
 import React from 'react'
-import { Select, InputNumber, Button } from 'antd';
+import { Select, InputNumber, Button, Alert } from 'antd';
 import WaitApiService from '../services/wait-api-service';
 import * as dayjs from 'dayjs'
 
@@ -8,10 +8,11 @@ class WaitForm extends React.Component {
         formOpen: false,
         location_id: '',
         wait: 20,
-        submitted: ''
+        submitted: false
     }
     handleChange = (value) => {
         console.log(`selected ${value}`);
+
         this.setState({
             location_id: value
         })
@@ -31,6 +32,9 @@ class WaitForm extends React.Component {
 
     handleSubmit = () => {
        const { location_id, wait } = this.state;
+
+    
+       if (location_id > 0) {
        const today = dayjs();
         const date = dayjs(today).format('YYYY-MM-D')
         const hour = dayjs(today).format('HH')
@@ -38,7 +42,8 @@ class WaitForm extends React.Component {
 
         WaitApiService.createWait(date, hour, location_id, wait)
         .then(res => {
-
+            this.props.refreshData()
+            
             this.setState({
                 submitted: true
             }, () => {
@@ -54,7 +59,9 @@ class WaitForm extends React.Component {
                 }, 2000)
             })
         })
-   
+    } else {
+        alert("Please select a location");
+    }
 
     }
 
@@ -71,28 +78,31 @@ class WaitForm extends React.Component {
 
         return (
             <div className="wait-form">
-                <div className="content-section">
+                <div className="form">
                 
                     <div className="content-container low-padding">
+                        {this.state.formOpen === false && 
                         <div className="form-input">
 
                         
                   
                         <p className="form-label">Are you at an assessement centre?</p>
                         <div className="button-box">
-                        <Button
+                        <Button className="button"
                             onClick={this.handleClick}>
                             Report Wait Time
                         </Button>
                         </div>
+                    
                         
 
                     
                 </div>
+                        }
 
               
                 
-    {this.state.formOpen && 
+    {this.state.formOpen && this.state.submitted === false &&
                     
                 <div className="select-form">
                     <div className="location-input">
@@ -122,16 +132,21 @@ class WaitForm extends React.Component {
                     </div>
               
                     <div className="button-box">
-                    <Button
+                    <Button className="button"
                         onClick={(e) => this.handleSubmit(e)}>
                         Submit Wait Time Report
                     </Button>
                 </div>
                 </div>
                 }
-                
+                 <div className="thank-you-message">
+                {this.state.submitted && 
+                <p className="form-label">Thank you for submitting a wait time</p>
+                }
             </div>
             </div>
+            </div>
+           
             </div>
         )
     }

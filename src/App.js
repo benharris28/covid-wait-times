@@ -7,9 +7,32 @@ import * as dayjs from 'dayjs'
 
 class App extends React.Component {
   state = {
-    waits: ''
+    waitTimes: []
   }
 
+  componentDidMount = () => {
+    this.refreshData()
+  }
+
+  refreshData = () => {
+    const today = dayjs();
+    const date = dayjs(today).format('YYYY-MM-D')
+    const hour = dayjs(today).format('HH')
+    
+    WaitApiService.getAllWaits(date, hour)
+       
+        .then(res => {
+          this.setWaits(res)
+        
+        })
+      }
+  
+
+  setWaits = (res) => {
+    this.setState({
+      waitTimes: res
+    })
+  }
   
 
   render() {
@@ -38,9 +61,9 @@ class App extends React.Component {
 
                         </div>
                     </div>
-                    <WaitForm />
+                
              
-                  <CardList waits={this.state.waits}/>
+                    <CardList waitTimes={this.state.waitTimes}/>
       </div>
     )
   }
