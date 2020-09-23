@@ -4,19 +4,40 @@ import WaitForm from '../WaitForm/WaitForm'
 import { Layout, Button, Collapse } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
+import WaitApiService from '../services/wait-api-service';
+import * as dayjs from 'dayjs'
 
 class CardList extends React.Component {
     
     state = {
-        waitTimes: this.props.waits
+        waitTimes: []
 
     }
+
+    componentDidMount = () => {
+        const today = dayjs();
+        const date = dayjs(today).format('YYYY-MM-D')
+        const hour = dayjs(today).format('HH')
+        
+        WaitApiService.getAllWaits(date, hour)
+           
+            .then(res => {
+              this.setWaits(res)
+            
+            })
+      }
+    
+      setWaits = (res) => {
+        this.setState({
+          waitTimes: res
+        })
+      }
 
    
 
     render() {
         const { Panel } = Collapse;
-        const {waitTimes} = this.state;
+        const { waits } = this.props;
         const dropdownIcon = <PlusCircleOutlined />
         
         const sampleData = [
@@ -73,7 +94,20 @@ class CardList extends React.Component {
 
         ]
 
-        
+      
+
+       console.log(sampleData)
+    
+       console.log(this.state.waitTimes)
+
+       const test = JSON.parse(JSON.stringify(this.state.waitTimes))
+       console.log(test)
+
+       const testTwo = this.state.waitTimes.map(t => "test")
+       console.log(testTwo)
+      
+
+       
         
         return (
             <div className="card-list">
@@ -88,7 +122,56 @@ class CardList extends React.Component {
 
                     
 
-                
+                    <div className="card-loop">
+                    {this.state.waitTimes.map(wait => 
+                         <div className="shop-product-card">
+                         <div className="shadow-box">
+                         <Link to={`/product/${wait.link}`} style={{ textDecoration: 'none' }}>
+                         <div className="product-item">
+                           <div className="shop-product-image-box">
+                               <div className={wait.wait_time >= 90 ? "wait-time-image red" : "wait-time-image"}>
+                                    <p className="wait-time-heading">{Math.round(wait.wait_time)} minutes</p>
+                               </div>
+                               
+                           </div>
+                           <div className="shop-product-clickable-details">
+                               <p className="shop-product-title bold-title">{wait.name}</p>
+                           </div>
+               
+                           </div>
+                       
+                       
+                       </Link>
+                       <div className="price-box">
+                           <p className="shop-product-detail">{wait.address}</p>
+                       </div>
+                   
+                       <div className="shop-product-quick-add-box">
+               
+                                                               
+               
+               <Collapse 
+                   bordered={false}
+                   ghost>
+                   <Panel header="More Details" key="1">
+                       <div className="more-detail-panel">
+                        <p className="shop-product-detail">Hours: {wait.hours}</p>
+                        <p className="shop-product-detail">Age Restrictions: {wait.age_restrictions}</p>
+                        <p className="shop-product-detail">Link: {wait.link}</p>
+                       </div>
+                   </Panel>
+               </Collapse>
+               
+               </div>
+                       
+                       
+                      
+                     </div>
+                     </div>
+                    )}
+                    
+                </div>
+                   
            
                 <div className="card-loop">
                     {sampleData.map(card => 

@@ -16,6 +16,18 @@ const WaitApiService = {
             : res.json()
         )
     },
+    getAllWaits(date, hour) {
+        return fetch(`${config.API_ENDPOINT}/waits?date=${date}&hour=${hour}`, {
+            headers: {
+            
+            },
+          })
+            .then(res =>
+              (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+            )
+        },
 
 }
 

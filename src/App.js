@@ -3,22 +3,17 @@ import './App.css';
 import CardList from './CardList/CardList'
 import WaitForm from './WaitForm/WaitForm'
 import WaitApiService from './services/wait-api-service';
+import * as dayjs from 'dayjs'
 
 class App extends React.Component {
   state = {
     waits: ''
   }
 
-  componentDidMount = () => {
-    WaitApiService.getAllWaits()
-       
-        .then(waits => {
-          this.setWalks(waits)
-        
-        })
-  }
+  
 
   render() {
+    console.log(this.state)
     return (
       <div className="app">
           <div className="content-section light-grey">
