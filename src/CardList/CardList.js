@@ -70,7 +70,7 @@ class CardList extends React.Component {
                     {this.state.waitTimes.map(wait => 
                          <div className="shop-product-card" key={wait.id}>
                          <div className="shadow-box">
-                         <a target='_blank' rel="noopener noreferrer" href={`${wait.link}`}>
+                         <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
             
                          <div className="product-item">
                            <div className="shop-product-image-box">
@@ -83,7 +83,9 @@ class CardList extends React.Component {
                                
                            </div>
                            <div className="shop-product-clickable-details">
+                          
                                <p className="shop-product-title bold-title">{wait.name}</p>
+                           
                            </div>
                
                            </div>
@@ -91,7 +93,9 @@ class CardList extends React.Component {
                        
                        </a>
                        <div className="price-box">
+                       <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
                            <p className="shop-product-detail">{wait.address}</p>
+                            </a>
                        </div>
                    
                        <div className="shop-product-quick-add-box">
