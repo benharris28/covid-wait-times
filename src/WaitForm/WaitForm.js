@@ -12,7 +12,7 @@ class WaitForm extends React.Component {
         submitted: false
     }
     handleChange = (value) => {
-        console.log(`selected ${value}`);
+    
 
         this.setState({
             location_id: value
@@ -20,7 +20,7 @@ class WaitForm extends React.Component {
     }
 
     handleChangeTime = (value) => {
-        console.log(`selected ${value}`);
+     
 
         var waitValue = Number(value)
 
@@ -78,14 +78,12 @@ class WaitForm extends React.Component {
 
     render() {
         const { Option } = Select;
-        console.log(this.state)
+    
         const today = dayjs();
         const date = dayjs(today).format('YYYY-MM-D')
         const hour = dayjs(today).format('HH')
         const prevHour = hour - 1
-        console.log(date)
-        console.log(hour)
-        console.log(prevHour)
+      
 
         return (
             <div className="wait-form">

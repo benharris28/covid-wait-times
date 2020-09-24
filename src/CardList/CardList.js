@@ -10,8 +10,8 @@ import * as dayjs from 'dayjs'
 class CardList extends React.Component {
     
     state = {
-        waitTimes: []
-
+        waitTimes: [],
+        test: ''
     }
 
     componentDidMount = () => {
@@ -45,12 +45,11 @@ class CardList extends React.Component {
         const dropdownIcon = <PlusCircleOutlined />
 
         const zeroCheck = this.state.waitTimes.filter(w => w.avg_wait)
-        console.log(zeroCheck)
+      
         
 
     
-       console.log(this.state.waitTimes)
-
+     
       
 
        
