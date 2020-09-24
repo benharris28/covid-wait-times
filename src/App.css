@@ -42,6 +42,32 @@
   font-size: 20px;
 }
 
+.footer {
+  position: sticky;
+  padding: 0 20px;
+  top: 0px;
+  overflow: auto;
+  color: white;
+  background-color: #212a2f;
+  height: 300px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  text-align: center;
+}
+.footer-heading {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-button-box {
+  margin-top: 20px;
+}
+
 .title-centre {
   display: -webkit-box;
   display: -webkit-flex;

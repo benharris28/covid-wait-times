@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardList from './CardList/CardList'
 import Navbar from './Navbar/Navbar'
+import Footer from './Footer/Footer'
 import WaitForm from './WaitForm/WaitForm'
 import WaitApiService from './services/wait-api-service';
 import * as dayjs from 'dayjs'
@@ -71,6 +72,7 @@ class App extends React.Component {
                 
              
                     <CardList waitTimes={this.state.waitTimes}/>
+                    <Footer />
       </div>
     )
   }
