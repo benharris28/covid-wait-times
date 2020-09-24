@@ -190,6 +190,10 @@
   background-color: red;
 }
 
+.green {
+  background-color:green;
+}
+
 .shop-product-quick-add-box {
 font-weight: 400;
     line-height: 1.43;
@@ -200,6 +204,12 @@ font-weight: 400;
     color: rgb(33, 42, 47);
     margin-bottom: 16px;
 
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
 .shop-product-quick-add {
@@ -245,6 +255,7 @@ font-weight: 400;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 16px;
 }
 
 .select-form {
@@ -260,8 +271,8 @@ font-weight: 400;
   align-items: center;
   text-align: center;
   max-width: 700px;
-  margin: auto;
   margin-top: 24px;
+  margin-bottom: 20px;
 }
 
 .thank-you-message {
@@ -282,6 +293,7 @@ font-weight: 400;
   align-items: center;
   text-align: center;
   margin-top: 24px;
+  margin-bottom: 20px;
 }
 
 .wait-input {
@@ -289,7 +301,7 @@ font-weight: 400;
 }
 
 .ant-input-number {
-  width: 200px;
+  width: 90%;
   height: 40px;
 }
 
@@ -358,8 +370,30 @@ font-weight: 400;
   margin-top: 16px;
 }
 
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 50px;
+}
+
 .ant-select-selection-item {
   white-space: pre-wrap;
+}
+
+
+.ant-select-single .ant-select-selector .ant-select-selection-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-select-arrow {
+  top: 60%;
+}
+
+.ant-input-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
 .ant-input-number-input {

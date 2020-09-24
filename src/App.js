@@ -52,7 +52,7 @@ class App extends React.Component {
                                     Toronto COVID-19 Test Center Wait Times
                             </h1>
                                 <div className="hero-details">
-                                Live wait times are displayed below. Wait times are estimates submitted from users in line
+                                Live crowd-sourced wait times from fellow Torontonians in line
                         </div>
 
 
