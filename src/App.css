@@ -102,7 +102,7 @@
 
 .wait-time-image {
   width: 400px;
-  height: 200px;
+  height: 125px;
   background-color: rgb(245, 245, 245);
   color: black;
   background-color: rgb(245, 245, 245);
@@ -399,6 +399,11 @@ font-weight: 400;
 .ant-input-number-input {
   text-align: center;
   font-size: 20px;
+}
+
+.more-detail-panel a {
+  text-decoration: underline;
+  color: blue
 }
 
 

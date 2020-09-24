@@ -93,6 +93,7 @@ class CardList extends React.Component {
                        
                        </a>
                        <div className="price-box">
+                         
                        <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
                            <p className="shop-product-detail">{wait.address}</p>
                             </a>
@@ -109,6 +110,9 @@ class CardList extends React.Component {
                        <div className="more-detail-panel">
                         <p className="shop-product-detail">Hours: {wait.hours}</p>
                         <p className="shop-product-detail">Age Restrictions: {wait.age_restrictions}</p>
+                        <a target='_blank' rel="noopener noreferrer" href={`${wait.link}`}>
+                        <p className="shop-product-detail">Site</p>
+                        </a>
                        
                        </div>
                    </Panel>
