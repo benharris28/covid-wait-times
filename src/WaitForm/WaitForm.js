@@ -8,7 +8,7 @@ class WaitForm extends React.Component {
     state = {
         formOpen: false,
         location_id: '',
-        wait: 20,
+        wait: '',
         submitted: false
     }
     handleChange = (value) => {
@@ -45,7 +45,7 @@ class WaitForm extends React.Component {
         const { location_id, wait } = this.state;
 
 
-        if (location_id > 0) {
+        if (location_id > 0 && wait > 0) {
             const today = dayjs();
             const date = dayjs(today).format('YYYY-MM-D')
             const hour = dayjs(today).format('HH')
@@ -71,7 +71,7 @@ class WaitForm extends React.Component {
                     })
                 })
         } else {
-            alert("Please select a location");
+            alert("Please select a location and time");
         }
 
     }
@@ -148,9 +148,7 @@ class WaitForm extends React.Component {
                                         <Option value="180">3 hours</Option>
                                         <Option value="240">4 hours</Option>
                                         <Option value="300">More than 4 hours</Option>
-                                        <Option value="11">Unity – St. Joseph’s Health Centre</Option>
-                                        <Option value="12">Unity – St. Michael’s Hospital</Option>
-                                        <Option value="13">Women’s College Hospital</Option>
+                                       
                                     </Select>
 
                                    

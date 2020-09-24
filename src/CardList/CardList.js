@@ -43,7 +43,9 @@ class CardList extends React.Component {
         const { Panel } = Collapse;
         const { waitTimes } = this.props;
         const dropdownIcon = <PlusCircleOutlined />
-        
+
+        const zeroCheck = this.state.waitTimes.filter(w => w.avg_wait)
+        console.log(zeroCheck)
         
 
     
@@ -80,7 +82,8 @@ class CardList extends React.Component {
 
                             </div>
                     <div className="card-loop">
-                    {this.state.waitTimes.filter(w => w.avg_wait).sort((a,b) => (a.avg_wait > b.avg_wait) ? 1 : ((b.avg_wait > a.avg_wait) ? -1 : 0)).map(wait => 
+                    {zeroCheck.length === 0 && <p>No wait times posted yet</p>}
+                    {zeroCheck.length > 0 && this.state.waitTimes.filter(w => w.avg_wait).sort((a,b) => (a.avg_wait > b.avg_wait) ? 1 : ((b.avg_wait > a.avg_wait) ? -1 : 0)).map(wait => 
                          <div className="shop-product-card" key={wait.id}>
                          <div className="shadow-box">
                          <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
