@@ -4,8 +4,13 @@ import CardList from './CardList/CardList'
 import WaitForm from './WaitForm/WaitForm'
 import WaitApiService from './services/wait-api-service';
 import * as dayjs from 'dayjs'
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-178937311-1');
 
 class App extends React.Component {
+  
+  
   state = {
     waitTimes: []
   }
