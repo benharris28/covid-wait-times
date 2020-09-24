@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import CardList from './CardList/CardList'
+import Navbar from './Navbar/Navbar'
 import WaitForm from './WaitForm/WaitForm'
 import WaitApiService from './services/wait-api-service';
 import * as dayjs from 'dayjs'
@@ -44,6 +45,7 @@ class App extends React.Component {
 
     return (
       <div className="app">
+        <Navbar />
           <div className="content-section light-grey">
                         <div className="content-container">
 
