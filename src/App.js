@@ -49,10 +49,10 @@ class App extends React.Component {
                                 
                  
                                 <h1 className="display-heading">
-                                    COVID-19 Assessment Center Wait Times
+                                    Toronto COVID-19 Test Center Wait Times
                             </h1>
                                 <div className="hero-details">
-                                Live wait times are displayed below. They are updated hourly
+                                Live wait times are displayed below. Wait times are estimates submitted from users in line
                         </div>
 
 

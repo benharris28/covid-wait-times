@@ -85,6 +85,21 @@
   background-color: rgb(245, 245, 245);
 }
 
+.thank-you-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.thank-you-heading {
+  font-size: 30px;
+    font-weight: 600;
+    line-height: 1.32;
+    letter-spacing: .5px;
+    color: #212a2f;
+    margin: 0;
+    padding: 0;
+}
+
 .wait-time-image {
   width: 400px;
   height: 200px;
@@ -359,9 +374,7 @@ font-weight: 400;
 
 
 
-.wait-time-image {
 
-}
 
 .shop-product-card {
   width: 100%;

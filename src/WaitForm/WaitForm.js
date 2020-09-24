@@ -1,5 +1,6 @@
 import React from 'react'
 import { Select, InputNumber, Button, Alert } from 'antd';
+import { CheckCircleTwoTone } from '@ant-design/icons';
 import WaitApiService from '../services/wait-api-service';
 import * as dayjs from 'dayjs'
 
@@ -43,7 +44,7 @@ class WaitForm extends React.Component {
         WaitApiService.createWait(date, hour, location_id, wait)
         .then(res => {
             this.props.refreshData()
-            
+
             this.setState({
                 submitted: true
             }, () => {
@@ -56,7 +57,7 @@ class WaitForm extends React.Component {
                             formOpen: false
                         })
                     })
-                }, 2000)
+                }, 3500)
             })
         })
     } else {
@@ -141,7 +142,11 @@ class WaitForm extends React.Component {
                 }
                  <div className="thank-you-message">
                 {this.state.submitted && 
-                <p className="form-label">Thank you for submitting a wait time</p>
+                <div>
+                    <CheckCircleTwoTone className="thank-you-icon" twoToneColor="#52c41a" />
+                    <p className="thank-you-heading">Thank you for submitting a wait time</p>
+                </div>
+                
                 }
             </div>
             </div>
