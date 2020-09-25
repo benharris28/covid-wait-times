@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from '../Cards/Cards'
 import WaitForm from '../WaitForm/WaitForm'
 import { Layout, Button, Collapse } from 'antd';
-import { PlusCircleOutlined } from '@ant-design/icons';
+import { PlusCircleOutlined, WarningOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import WaitApiService from '../services/wait-api-service';
 import * as dayjs from 'dayjs'
@@ -89,11 +89,20 @@ class CardList extends React.Component {
             
                          <div className="product-item">
                            <div className="shop-product-image-box red">
-                               <div className={wait.avg_wait >= 90 ? "wait-time-image red" : "wait-time-image"}>
+                               <div className={wait.avg_wait >= 90 ? "wait-time-image" : "wait-time-image"}>
                                    {wait.avg_wait ? 
-                                    <p className="wait-time-heading">{Math.round(wait.avg_wait)} minutes</p>
+                                    <div>
+                                        {wait.avg_wait >= 90 ? <p className="wait-time-time">{Math.round(wait.avg_wait/ 60)} hours</p> : <p className="wait-time-time">{Math.round(wait.avg_wait)} mins</p> }
+                                       
+                                        
+                                    </div>
                                     : <p className="wait-time-heading">No recent data</p>
                                 }
+                                {wait.avg_wait >= 120 && <div className="long-line">
+                                     <WarningOutlined className="long-line-icon" />
+                                    <p className="long-line-text">Extremely Busy!</p>
+
+                                </div>}
                                 
                                </div>
                             

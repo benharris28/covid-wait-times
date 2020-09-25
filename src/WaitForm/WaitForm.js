@@ -95,7 +95,7 @@ class WaitForm extends React.Component {
 
 
 
-                                <p className="form-label">Are you at an assessement centre?</p>
+                                <p className="form-label">Are you at an assessment centre?</p>
                                 <div className="button-box">
                                     <Button className="button"
                                         onClick={this.handleClick}>

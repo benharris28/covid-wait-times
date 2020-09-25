@@ -132,6 +132,7 @@
 .shop-product-image-box {
   width: 100%;
   background-color: rgb(245, 245, 245);
+  
 }
 
 .thank-you-icon {
@@ -160,11 +161,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #212a2f;
+  color: white;
+  flex-direction: column;
+}
+
+.wait-time-time {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 0px;
 }
 
 .wait-time-heading {
-  font-size: 30px;
+  font-size: 20px;
   margin: 0px;
+}
+
+.long-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EC4723;
+  padding: 5px;
+  border-radius: 24px;
+  width: 200px;
+}
+
+.long-line-icon {
+  font-size: 18px;
+}
+
+.long-line-text {
+  margin-bottom: 0px;
+  margin-left: 10px;
 }
 
 .guide-heading {
@@ -239,7 +268,11 @@
 }
 
 .red {
-  background-color: red;
+  background-color: #D73917;
+}
+
+.font-red {
+  color: #D73917
 }
 
 .green {
