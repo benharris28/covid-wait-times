@@ -141,6 +141,12 @@ class WaitForm extends React.Component {
                                         <Option value="11">Unity – St. Joseph’s Health Centre</Option>
                                         <Option value="12">Unity – St. Michael’s Hospital</Option>
                                         <Option value="13">Women’s College Hospital</Option>
+                                        <Option value="14">Mackenzie Health - Richmond Hill Hospital</Option>
+                                        <Option value="15">Mackenzie Health - Vaughan</Option>
+                                        <Option value="16">Markham Stouffville Hospital</Option>
+                                        <Option value="17">Southlake Regional Health Centre</Option>
+                                        <Option value="18">South Fletchers Sportsplex - Drive-thru</Option>
+                                        <Option value="19">Peel Memorial Centre for Integrated Health and Wellness</Option>
                                     </Select>
                                 </div>
 
