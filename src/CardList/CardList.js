@@ -1,8 +1,8 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
 import WaitForm from '../WaitForm/WaitForm'
-import { Layout, Button, Collapse } from 'antd';
-import { PlusCircleOutlined, WarningOutlined } from '@ant-design/icons';
+import { Layout, Button, Collapse, Badge } from 'antd';
+import { PlusCircleOutlined, WarningOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
 import WaitApiService from '../services/wait-api-service';
 import * as dayjs from 'dayjs'
@@ -45,6 +45,7 @@ class CardList extends React.Component {
         const dropdownIcon = <PlusCircleOutlined />
 
         const zeroCheck = this.state.waitTimes.filter(w => w.avg_wait)
+        console.log(this.state)
       
         
 
@@ -82,13 +83,24 @@ class CardList extends React.Component {
                             </div>
                     <div className="card-loop">
                     {zeroCheck.length === 0 && <p>No wait times posted yet</p>}
-                    {zeroCheck.length > 0 && this.state.waitTimes.filter(w => w.avg_wait).sort((a,b) => (a.avg_wait > b.avg_wait) ? 1 : ((b.avg_wait > a.avg_wait) ? -1 : 0)).map(wait => 
+                    {zeroCheck.length > 0 && this.state.waitTimes.sort((a,b) => (b.avg_wait > a.avg_wait)).filter(w => w.avg_wait).map(wait => 
+                         
+                        
+                   
                          <div className="shop-product-card" key={wait.id}>
+                            
                          <div className="shadow-box">
                          <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
             
                          <div className="product-item">
-                           <div className="shop-product-image-box red">
+                           <div className="shop-product-image-box">
+                               <div className="submissions-bar">
+                                    <UserOutlined className="submission-icon" />
+                                    {wait.submissions > 1 
+                                    ? <p className="submission-text">{wait.submissions} users reporting</p>
+                                    : <p className="submission-text">{wait.submissions} user reporting</p>
+                                    }
+                               </div>
                                <div className={wait.avg_wait >= 90 ? "wait-time-image" : "wait-time-image"}>
                                    {wait.avg_wait ? 
                                     <div>
@@ -150,7 +162,9 @@ class CardList extends React.Component {
                        
                       
                      </div>
+               
                      </div>
+                    
                     )}
                     
                 </div>

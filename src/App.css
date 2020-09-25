@@ -196,6 +196,25 @@
   margin-left: 10px;
 }
 
+.submissions-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  color: black;
+}
+
+.submission-text {
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  color: black;
+}
+
+.submission-icon {
+  font-size: 16px;
+}
+
 .guide-heading {
   
   position: relative;
