@@ -12,7 +12,7 @@ class WaitForm extends React.Component {
         submitted: false
     }
     handleChange = (value) => {
-    
+
 
         this.setState({
             location_id: value
@@ -20,7 +20,7 @@ class WaitForm extends React.Component {
     }
 
     handleChangeTime = (value) => {
-     
+
 
         var waitValue = Number(value)
 
@@ -78,41 +78,52 @@ class WaitForm extends React.Component {
 
     render() {
         const { Option } = Select;
-    
+
         const today = dayjs();
         const date = dayjs(today).format('YYYY-MM-D')
         const hour = dayjs(today).format('HH')
         const prevHour = hour - 1
-      
+
 
         return (
             <div className="wait-form">
+
+                {this.state.formOpen === false &&
+                  <div className="content-section low-padding">
+                      <div className="content-container">
+                  
+                  <div className="container-2">
+                      <div className="cta-banner-dark">
+                          <div className="cta-container">
+                              <div className="next-section-content">
+                                  <h2 className="font-white">At an assessment center?</h2>
+                                  <h5 className="font-white">Please help your fellow Torontonians by submitting your estimated wait time</h5>
+                              </div>
+                              <div className="cta-button-container">
+                              
+                                      <Button 
+                                        className="button-cta"  
+                                        onClick={this.handleClick}>
+                                          Report Wait Time
+                                      </Button>
+                              
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+                  </div>
+                  }
+              
                 <div className="form">
 
-                    <div className="content-container low-padding">
-                        {this.state.formOpen === false &&
-                            <div className="form-input">
-
-
-
-                                <p className="form-label">Are you at an assessment centre?</p>
-                                <div className="button-box">
-                                    <Button className="button"
-                                        onClick={this.handleClick}>
-                                        Report Wait Time
-                        </Button>
-                                </div>
-
-
-
-
-                            </div>
-                        }
+                  
+                
 
 
 
                         {this.state.formOpen && this.state.submitted === false &&
-
+                            <div className="content-container low-padding">
                             <div className="select-form">
                                 <div className="location-input">
                                     <p className="form-label">Which assessment center are you at?</p>
@@ -146,10 +157,10 @@ class WaitForm extends React.Component {
                                         <Option value="180">3 hours</Option>
                                         <Option value="240">4 hours</Option>
                                         <Option value="300">More than 4 hours</Option>
-                                       
+
                                     </Select>
 
-                                   
+
                                 </div>
 
                                 <div className="button-box">
@@ -159,6 +170,7 @@ class WaitForm extends React.Component {
                     </Button>
                                 </div>
                             </div>
+                            </div>
                         }
                         <div className="thank-you-message">
                             {this.state.submitted &&
@@ -166,15 +178,15 @@ class WaitForm extends React.Component {
                                     <Result
                                         status="success"
                                         title="Successfully submitted wait-time report"
-                                        
-                                       
+
+
                                     />
                                 </div>
 
                             }
                         </div>
                     </div>
-                </div>
+              
 
             </div>
         )
