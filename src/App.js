@@ -56,7 +56,7 @@ class App extends React.Component {
                         <div className="container">
                       
                      
-                             <h1 className="homepage-heading">Assessment centre lines in the GTA</h1>
+                             <h1 className="homepage-heading">GTA Assessment Centre Lines</h1>
                              <p className="heading-details">Live crowd-sourced wait times from fellow Torontonians in line</p>
                         </div>
 
