@@ -24,6 +24,8 @@ h2 {
   font-size: 30px;
   line-height: 1.2;
 }
+
+
 .container-2 {
 
     width: 100%;
@@ -124,15 +126,16 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  text-align: center;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
 }
 
 .nav-icon {
-  margin-bottom: 10px;
+  margin-right: 16px;
   font-size: 20px;
+  
 }
 
 .footer {
@@ -159,6 +162,46 @@ h2 {
 
 .footer-button-box {
   margin-top: 20px;
+}
+
+/* Landing Page */ 
+
+.homepage-hero {
+  position: relative;
+  height: calc(95vh - 60px);
+  min-height: 500px;
+}
+
+.homepage-hero-image {
+  height: 100%;
+background-color: rgb(245, 245, 245);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  opacity: 0.7;
+}
+
+.homepage-hero-heading {
+  z-index: 10;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  left: 0;
+  padding: 0 10px;
+  padding-left: 20px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.homepage-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  
+}
+
+.heading-details {
+  font-size: 20px;
 }
 
 .title-centre {
@@ -678,15 +721,22 @@ font-weight: 400;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
   }
   
   .nav-icon {
     margin-right: 10px;
     font-size: 20px;
-    padding-top: 10px;
+   
+  }
+
+  .homepage-heading {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    
   }
 
 }

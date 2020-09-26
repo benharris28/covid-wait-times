@@ -7,6 +7,7 @@ import WaitForm from './WaitForm/WaitForm'
 import WaitApiService from './services/wait-api-service';
 import * as dayjs from 'dayjs'
 import ReactGA from 'react-ga';
+import line_hero from './Assets/line_hero.jpg'
 
 ReactGA.initialize('UA-178937311-1');
 
@@ -47,28 +48,22 @@ class App extends React.Component {
     return (
       <div className="app">
         <Navbar />
-          <div className="content-section light-grey">
-                        <div className="content-container">
+        <div className="homepage-hero">
+                    <div className="homepage-hero-image" style={{ backgroundImage: `url(${line_hero})`}}>
 
-                            <div className="title-centre">
-                            <div className="guide-heading">
-                            Wait Times
-                            </div>
-                                
-                 
-                                <h1 className="display-heading">
-                                    Toronto COVID-19 Test Center Wait Times
-                            </h1>
-                                <div className="hero-details">
-                                Live crowd-sourced wait times from fellow Torontonians in line
-                        </div>
-
-
-
-                            </div>
-
-                        </div>
                     </div>
+                    <div className="homepage-hero-heading">
+                        <div className="container">
+                      
+                     
+                             <h1 className="homepage-heading">Track test centre lines in the GTA</h1>
+                             <p className="heading-details">Live crowd-sourced wait times from fellow Torontonians in line</p>
+                        </div>
+
+                        
+                    </div>
+                </div>
+         
                 
              
                     <CardList waitTimes={this.state.waitTimes}/>
