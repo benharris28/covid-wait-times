@@ -83,7 +83,7 @@ class CardList extends React.Component {
                             </div>
                     <div className="card-loop">
                     {zeroCheck.length === 0 && <p>No wait times posted yet</p>}
-                    {zeroCheck.length > 0 && this.state.waitTimes.sort((a,b) => (b.avg_wait > a.avg_wait)).filter(w => w.avg_wait).map(wait => 
+                    {zeroCheck.length > 0 && this.state.waitTimes.filter(w => w.avg_wait).map(wait => 
                          
                         
                    
