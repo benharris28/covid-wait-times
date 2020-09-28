@@ -8,6 +8,8 @@ import WaitApiService from './services/wait-api-service';
 import * as dayjs from 'dayjs'
 import ReactGA from 'react-ga';
 import line_hero from './Assets/line_hero.jpg'
+import { Route, Switch } from 'react-router-dom'
+import Loader from './Loader/Loader';
 
 ReactGA.initialize('UA-178937311-1');
 
@@ -47,6 +49,17 @@ class App extends React.Component {
 
     return (
       <div className="app">
+         <Route
+                      exact
+                      path={'/loaderio-dafa03867ad7f94a65d12cf61eaa47c0'}
+                      component={Loader}
+                  />
+        <Route 
+          exact
+          path={'/'}
+        >
+
+        
         <Navbar />
         <div className="homepage-hero">
                     <div className="homepage-hero-image" style={{ backgroundImage: `url(${line_hero})`}}>
@@ -64,10 +77,12 @@ class App extends React.Component {
                     </div>
                 </div>
          
-                
+
              
                     <CardList waitTimes={this.state.waitTimes}/>
                     <Footer />
+                    </Route>
+                   
       </div>
     )
   }
