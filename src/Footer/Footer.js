@@ -8,15 +8,9 @@ class Navbar extends React.Component {
         return(
             <div className="footer">
               
-                <p className="footer-heading">Do you have any feedback? Please submit your feedback here</p>
-                <div className="footer-button-box">
-                <a target='_blank' rel="noopener noreferrer" href="https://covidwaits.typeform.com/to/G2vhScc1">
-                    <Button className="button">
-                        Submit Feedback
-                    </Button>
+                <p className="footer-heading">This site is for the community and is completely free. There is no user tracking or monetization.</p>
+                <p>If you have any feedback, please email Ben Harris at benjaminharris28@gmail.com</p>
                 
-                </a>
-                </div>
             </div>
         )
     }
