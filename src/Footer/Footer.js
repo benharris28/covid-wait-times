@@ -9,7 +9,7 @@ class Navbar extends React.Component {
             <div className="footer">
               
                 <p className="footer-heading">This site is for the community and is completely free. There is no user tracking or monetization.</p>
-                <p>If you have any feedback, please email Ben Harris at benjaminharris28@gmail.com</p>
+                <p>If you have any feedback, please email Ben Harris at <a href="mailto:covidwaits@gmail.com">covidwaits@gmail.com</a></p>
                 
             </div>
         )

@@ -127,7 +127,12 @@ class WaitForm extends React.Component {
                             <div className="select-form">
                                 <div className="location-input">
                                     <p className="form-label">Which assessment center are you at?</p>
-                                    <Select className="selector" defaultValue="Select a location" style={{ width: "90%" }} onChange={this.handleChange}>
+                                    <Select 
+                                        className="selector" 
+                                        defaultValue="Select a location" 
+                                        style={{ width: "90%" }} 
+                                        onChange={this.handleChange}
+                                        getPopupContainer={trigger => trigger.parentElement}>
                                         <Option value="1">Etobicoke General Hospital Drive-Thru</Option>
                                         <Option value="2">Humber River Hospital, Reactivation Care Centre – Finch Site</Option>
                                         <Option value="3">Michael Garron Hospital</Option>
