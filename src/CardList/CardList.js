@@ -149,6 +149,7 @@ class CardList extends React.Component {
                        <div className="more-detail-panel">
                         <p className="shop-product-detail">Hours: {wait.hours}</p>
                         <p className="shop-product-detail">Age Restrictions: {wait.age_restrictions}</p>
+                        <p className="shop-product-detail">Other details: {wait.other_details}</p>
                         <a target='_blank' rel="noopener noreferrer" href={`${wait.link}`}>
                         <p className="shop-product-detail">Site</p>
                         </a>
