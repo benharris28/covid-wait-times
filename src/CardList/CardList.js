@@ -1,6 +1,6 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
-import WaitForm from '../WaitForm/WaitForm'
+import Form from '../Form/Form'
 import { Layout, Button, Collapse, Badge } from 'antd';
 import { PlusCircleOutlined, WarningOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
@@ -60,7 +60,7 @@ class CardList extends React.Component {
              
 
 
-                <WaitForm refreshData={this.refreshData} />
+                <Form refreshData={this.refreshData} />
 
                 <div className="content-section">
                     <div className="content-container">

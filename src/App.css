@@ -460,6 +460,19 @@ font-weight: 400;
   margin: auto;
 }
 
+
+
+.location-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.wait-time-form {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 40px;
+}
+
 .shop-product-quick-add {
  
     position: relative;
@@ -607,6 +620,7 @@ font-weight: 400;
     color: #212a2f;
     margin: 0;
     padding: 0;
+    margin-bottom: 16px;
 }
 
 
