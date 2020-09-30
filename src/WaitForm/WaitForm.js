@@ -2,6 +2,7 @@ import React from 'react'
 import { Select, InputNumber, Button, Alert, Result } from 'antd';
 import { CheckCircleTwoTone } from '@ant-design/icons';
 import WaitApiService from '../services/wait-api-service';
+import Form from '../Form/Form'
 import * as dayjs from 'dayjs'
 
 class WaitForm extends React.Component {
@@ -87,6 +88,7 @@ class WaitForm extends React.Component {
 
         return (
             <div className="wait-form">
+             
 
                 {this.state.formOpen === false &&
                   <div className="content-section low-padding">
