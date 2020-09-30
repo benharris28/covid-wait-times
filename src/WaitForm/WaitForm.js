@@ -88,7 +88,7 @@ class WaitForm extends React.Component {
 
         return (
             <div className="wait-form">
-             
+                <Form />
 
                 {this.state.formOpen === false &&
                   <div className="content-section low-padding">
