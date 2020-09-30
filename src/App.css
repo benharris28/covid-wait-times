@@ -19,6 +19,10 @@
   padding: 100px 3%;
 }
 
+body {
+  font-size: 16px;
+}
+
 h2 {
   font-weight: 700;
   font-size: 30px;
@@ -460,6 +464,9 @@ font-weight: 400;
   margin: auto;
 }
 
+.select-form input {
+  font-size: 16px;
+}
 
 
 .location-form {

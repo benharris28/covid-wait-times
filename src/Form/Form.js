@@ -161,7 +161,7 @@ class Form extends React.Component {
                 <div className="content-container low-padding">
                 <div className="location-form">
                 <p className="form-label">Which assessment center are you at?</p>
-                <Select value={selectedOption}
+                <Select className="form-select" value={selectedOption}
 
                         onChange={this.handleChange}
                         options={options} 
@@ -174,6 +174,7 @@ class Form extends React.Component {
                     value={selectedWait}
                     onChange={this.handleChangeTime}
                     options={waitOptions} 
+                    className="form-select"
                     />
             
             </div>
