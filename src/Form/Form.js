@@ -111,7 +111,8 @@ class Form extends React.Component {
             { value: '18', label: 'South Fletchers Sportsplex - Drive-thru' },
             { value: '19', label: 'Peel Memorial Centre for Integrated Health and Wellness' },
             { value: '20', label: 'Crescent Town Health Centre (Pop-Up)' },
-            { value: '21', label: 'TNO Youth Centre (Pop-Up)' }
+            { value: '21', label: 'TNO Youth Centre (Pop-Up)' },
+            { value: '22', label: 'Humber River Hospital - Church Site' }
 
 
           ]
