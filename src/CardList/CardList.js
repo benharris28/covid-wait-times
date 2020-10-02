@@ -6,12 +6,14 @@ import { PlusCircleOutlined, WarningOutlined, UserOutlined } from '@ant-design/i
 import { Link } from 'react-router-dom'
 import WaitApiService from '../services/wait-api-service';
 import * as dayjs from 'dayjs'
+import RegionSelector from '../RegionSelector/RegionSelector'
 
 class CardList extends React.Component {
     
     state = {
         waitTimes: [],
-        test: ''
+        test: '',
+        regions: [1,2,3,4]
     }
 
     componentDidMount = () => {
@@ -36,6 +38,12 @@ class CardList extends React.Component {
         this.setState({
           waitTimes: res
         })
+      }
+
+      setRegion = (regions) => {
+          this.setState({
+              regions: regions
+          })
       }
       
 
@@ -62,6 +70,10 @@ class CardList extends React.Component {
 
                 <Form refreshData={this.refreshData} />
 
+                <div className="region-selector-container">
+                    <RegionSelector setRegion={this.setRegion} />
+                </div>
+                
                 <div className="content-section">
                     <div className="content-container">
                         
