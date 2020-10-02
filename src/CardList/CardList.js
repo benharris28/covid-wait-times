@@ -53,7 +53,9 @@ class CardList extends React.Component {
         const dropdownIcon = <PlusCircleOutlined />
 
         const zeroCheck = this.state.waitTimes.filter(w => w.avg_wait)
+        const filterCheck = this.state.waitTimes.filter(w => this.state.regions.includes(w.region)).map(item => item)
         console.log(this.state)
+        console.log(filterCheck)
       
         
 
@@ -95,10 +97,10 @@ class CardList extends React.Component {
                             <div className="region-selector-container">
                                 <RegionSelector setRegion={this.setRegion} />
                              </div>
-                             
+
                     <div className="card-loop">
                     {zeroCheck.length === 0 && <p>No wait times posted yet</p>}
-                    {zeroCheck.length > 0 && this.state.waitTimes.filter(w => w.avg_wait && this.state.regions.includes(w.region)).map(wait => 
+                    {zeroCheck.length > 0 && filterCheck.length > 0 && this.state.waitTimes.filter(w => w.avg_wait && this.state.regions.includes(w.region)).map(wait => 
                          
                         
                    

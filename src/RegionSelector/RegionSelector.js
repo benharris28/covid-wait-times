@@ -23,9 +23,9 @@ class RegionSelector extends React.Component {
     }
 
     else {
-        regionList = [1,2,3,4]
+        regionList = []
         this.setState({
-            regions: [1,2,3,4]
+            regions: []
         }, () => this.props.setRegion(regionList))
     }
 }
