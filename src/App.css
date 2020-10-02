@@ -142,6 +142,10 @@ h2 {
   
 }
 
+.nav-text {
+  margin-bottom: 0px;
+}
+
 .footer {
   position: sticky;
   padding: 0 20px;

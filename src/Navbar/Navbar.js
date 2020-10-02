@@ -7,7 +7,8 @@ class Navbar extends React.Component {
         return(
             <div className="navbar">
                 <InfoCircleOutlined className="nav-icon" />
-                All data is crowd-sourced. Sites in Mississauga added!
+                <p className="nav-text">Shortest lines from this past week are up. 
+                <a target='_blank' rel="noopener noreferrer" href="https://twitter.com/CovidWaits"> Follow us on twitter for more info!</a></p>
             </div>
         )
     }
