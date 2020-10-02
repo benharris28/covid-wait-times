@@ -13,13 +13,22 @@ class RegionSelector extends React.Component {
     }
 
     handleChange = (regions) => {
-        const regionList = regions.map(region => region.value)
+        let regionList = [];
+        if(regions !== null) {
+        regionList = regions.map(region => Number(region.value))
 
         this.setState({
             regions: regionList
         }, () => this.props.setRegion(regionList))
     }
- 
+
+    else {
+        regionList = [1,2,3,4]
+        this.setState({
+            regions: [1,2,3,4]
+        }, () => this.props.setRegion(regionList))
+    }
+}
 
  
     
@@ -47,7 +56,10 @@ class RegionSelector extends React.Component {
 
             
                 <div className="region-selector">
-                <p className="form-label">Which regions would you like to see?</p>
+                <div className="content-section low-padding">
+                    <div className="content-container">
+                        
+                
                 <Select className="form-select" value={selectedOption}
                         defaultValue={[options[0], options[1]]}
                         isMulti
@@ -56,8 +68,11 @@ class RegionSelector extends React.Component {
                         classNamePrefix="select"
                         onChange={this.handleChange}
                         options={options} 
+                        placeholder="Please select regions to display..."
                         />
 
+            </div>
+            </div>
             </div>
           
 

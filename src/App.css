@@ -474,6 +474,11 @@ font-weight: 400;
   margin: auto;
 }
 
+.region-selector-container {
+  max-width: 700px;
+  margin: auto;
+}
+
 .wait-time-form {
   max-width: 600px;
   margin: auto;
