@@ -112,7 +112,10 @@ class Form extends React.Component {
             { value: '19', label: 'Peel Memorial Centre for Integrated Health and Wellness' },
             { value: '20', label: 'Crescent Town Health Centre (Pop-Up)' },
             { value: '21', label: 'TNO Youth Centre (Pop-Up)' },
-            { value: '22', label: 'Humber River Hospital - Church Site' }
+            { value: '22', label: 'Humber River Hospital - Church Site' },
+            { value: '55', label: 'Mississauga Hospital - Clinical Administrative Building' },
+            { value: '56', label: 'Credit Valley Hospital - Valley House' },
+            { value: '57', label: 'Credit Valley Hospital - Drive thru' },
 
 
           ]

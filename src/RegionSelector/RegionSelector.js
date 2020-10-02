@@ -42,7 +42,7 @@ class RegionSelector extends React.Component {
             { value: '1', label: 'Toronto' },
             { value: '2', label: 'York' },
             { value: '3', label: 'Peel' },
-            { value: '4', label: 'Mississauga' },
+          
         
 
 
@@ -61,7 +61,7 @@ class RegionSelector extends React.Component {
                         
                 
                 <Select className="form-select" value={selectedOption}
-                        defaultValue={[options[0], options[1], options[2], options[3]]}
+                        defaultValue={[options[0], options[1], options[2]]}
                         isMulti
                         name="colors"
                         className="basic-multi-select"

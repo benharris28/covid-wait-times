@@ -13,7 +13,7 @@ class CardList extends React.Component {
     state = {
         waitTimes: [],
         test: '',
-        regions: [1,2,3,4]
+        regions: [1,2,3]
     }
 
     componentDidMount = () => {
