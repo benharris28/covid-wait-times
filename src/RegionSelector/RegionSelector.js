@@ -61,7 +61,7 @@ class RegionSelector extends React.Component {
                         
                 
                 <Select className="form-select" value={selectedOption}
-                        defaultValue={[options[0], options[1]]}
+                        defaultValue={[options[0], options[1], options[2], options[3]]}
                         isMulti
                         name="colors"
                         className="basic-multi-select"
