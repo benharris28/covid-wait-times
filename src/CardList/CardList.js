@@ -13,7 +13,8 @@ class CardList extends React.Component {
     state = {
         waitTimes: [],
         test: '',
-        regions: [1,2,3]
+        regions: [1,2,3],
+        sortableSites: ''
     }
 
     componentDidMount = () => {
@@ -45,6 +46,12 @@ class CardList extends React.Component {
               regions: regions
           })
       }
+
+      handleMarkers = (markers) => {
+          this.setState({
+              sortableSites: markers
+          })
+      }
       
 
     render() {
@@ -70,7 +77,7 @@ class CardList extends React.Component {
              
 
 
-                <PostalForm refreshData={this.refreshData} />
+                <PostalForm handleMarkers={this.handleMarkers} />
 
                
                 
@@ -81,12 +88,12 @@ class CardList extends React.Component {
                     
                     <div className="title-centre">
                             <div className="guide-heading">
-                            Live
+                            Unsorted
                             </div>
                                 
                  
                                 <h1 className="display-heading small">
-                                    Updated in past hour
+                                    GTA Test Sites
                             </h1>
                        
 
@@ -110,6 +117,9 @@ class CardList extends React.Component {
                          <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
             
                          <div className="product-item">
+                         <div className="submissions-bar">
+                             <p className="submission-text">Test</p>
+                         </div>
                            
                            <div className="shop-product-clickable-details">
                           
@@ -160,83 +170,9 @@ class CardList extends React.Component {
                     
                 </div>
 
-                <div className="title-centre">
-                            <div className="guide-heading">
-                            No data
-                            </div>
-                                
-                 
-                                <h1 className="display-heading small">
-                                    Waiting for updates
-                            </h1>
-                       
+                
 
-
-
-                            </div>
-
-                <div className="card-loop">
-                    {this.state.waitTimes.filter(w => w.avg_wait === null).map(wait => 
-                         <div className="shop-product-card" key={wait.id}>
-                         <div className="shadow-box">
-                         <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
-            
-                         <div className="product-item">
-                           <div className="shop-product-image-box">
-                               <div className={wait.avg_wait >= 90 ? "wait-time-image red" : "wait-time-image"}>
-                                   {wait.avg_wait ? 
-                                    <p className="wait-time-heading">{Math.round(wait.avg_wait)} minutes</p>
-                                    : <p className="wait-time-heading">No recent data</p>
-                                }
-                               </div>
-                               
-                               
-                           </div>
-                           <div className="shop-product-clickable-details">
-                          
-                               <p className="shop-product-title bold-title">{wait.name}</p>
-                           
-                           </div>
-               
-                           </div>
-                       
-                       
-                       </a>
-                       <div className="price-box">
-                         
-                       <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
-                           <p className="shop-product-detail">{wait.address}</p>
-                            </a>
-                       </div>
-                   
-                       <div className="shop-product-quick-add-box">
-               
-                                                               
-               
-               <Collapse 
-                   bordered={false}
-                   ghost>
-                   <Panel header="More Details" key="1">
-                       <div className="more-detail-panel">
-                        <p className="shop-product-detail">Hours: {wait.hours}</p>
-                        <p className="shop-product-detail">Age Restrictions: {wait.age_restrictions}</p>
-                        <a target='_blank' rel="noopener noreferrer" href={`${wait.link}`}>
-                        <p className="shop-product-detail">Site</p>
-                        </a>
-                       
-                       </div>
-                   </Panel>
-               </Collapse>
-               
-               </div>
-                       
-                       
-                      
-                     </div>
-                     </div>
-                    )}
-                    
-                </div>
+                
                    
            
                

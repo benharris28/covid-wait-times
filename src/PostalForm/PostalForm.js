@@ -5,6 +5,7 @@ import MapApiService from '../services/map-api-service';
 class PostalForm extends React.Component {
     state = {
         postal: '',
+        markers: '',
     }
 
     handleSubmit = () => {
@@ -18,9 +19,7 @@ class PostalForm extends React.Component {
 
                 MapApiService.getMarkers(lat, lng)
                     .then(markers => {
-                        this.setState({
-                            markers: markers
-                        })
+                        this.props.handleMarkers(markers)
                     })
             })
     }
