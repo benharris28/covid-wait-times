@@ -1,6 +1,6 @@
 import React from 'react'
 import Cards from '../Cards/Cards'
-import Form from '../Form/Form'
+import PostalForm from '../PostalForm/PostalForm'
 import { Layout, Button, Collapse, Badge } from 'antd';
 import { PlusCircleOutlined, WarningOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom'
@@ -70,7 +70,7 @@ class CardList extends React.Component {
              
 
 
-                <Form refreshData={this.refreshData} />
+                <PostalForm refreshData={this.refreshData} />
 
                
                 
@@ -110,34 +110,7 @@ class CardList extends React.Component {
                          <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
             
                          <div className="product-item">
-                           <div className="shop-product-image-box">
-                               <div className="submissions-bar">
-                                    <UserOutlined className="submission-icon" />
-                                    {wait.submissions > 1 
-                                    ? <p className="submission-text">{wait.submissions} users reporting</p>
-                                    : <p className="submission-text">{wait.submissions} user reporting</p>
-                                    }
-                               </div>
-                               <div className={wait.avg_wait >= 90 ? "wait-time-image" : "wait-time-image"}>
-                                   {wait.avg_wait ? 
-                                    <div>
-                                        {wait.avg_wait >= 90 ? <p className="wait-time-time">{Math.round(wait.avg_wait/ 60)} hours</p> : <p className="wait-time-time">{Math.round(wait.avg_wait)} mins</p> }
-                                       
-                                        
-                                    </div>
-                                    : <p className="wait-time-heading">No recent data</p>
-                                }
-                                {wait.avg_wait >= 120 && <div className="long-line">
-                                     <WarningOutlined className="long-line-icon" />
-                                    <p className="long-line-text">Extremely Busy!</p>
-
-                                </div>}
-                                
-                               </div>
-                            
-                              
-                               
-                           </div>
+                           
                            <div className="shop-product-clickable-details">
                           
                                <p className="shop-product-title bold-title">{wait.name}</p>
