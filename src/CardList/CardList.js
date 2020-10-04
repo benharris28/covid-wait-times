@@ -14,7 +14,10 @@ class CardList extends React.Component {
         waitTimes: [],
         test: '',
         regions: [1,2,3],
-        sortableSites: ''
+        sortableSites: '',
+        regionOpen: false,
+        postalOpen: false,
+        sorted: false
     }
 
     componentDidMount = () => {
@@ -46,10 +49,28 @@ class CardList extends React.Component {
 
       handleMarkers = (markers) => {
           this.setState({
-              waitTimes: markers
+              waitTimes: markers,
+              sorted: true
           })
       }
       
+      openPostalFilter = () => {
+        this.setState({
+            postalOpen: true
+        })
+      }
+
+      openRegionFilter = () => {
+        this.setState({
+            regionOpen: true
+        })
+      }
+
+      closePostalFilter = () => {
+          this.setState({
+              postalOpen: false
+          })
+      }
 
     render() {
         const { Panel } = Collapse;
@@ -74,7 +95,7 @@ class CardList extends React.Component {
              
 
 
-                <PostalForm handleMarkers={this.handleMarkers} />
+               
 
                
                 
@@ -85,7 +106,7 @@ class CardList extends React.Component {
                     
                     <div className="title-centre">
                             <div className="guide-heading">
-                            Unsorted
+                            {this.state.sorted ? "Sorted" : "Unsorted"}
                             </div>
                                 
                  
@@ -97,10 +118,53 @@ class CardList extends React.Component {
 
 
                             </div>
+                            <div className="filter">
+                            <div className="filter-title">
+                                        Filter list by
+                                    </div>
+                                <div className="filter-toolbar">
+                                    
+                                    <div className="filter-toolbar-flex-wrapper">
+                                        <Button 
+                                            className="filter-button"
+                                            onClick={this.openPostalFilter}>
+                                            <span className="filter-icon">
 
+                                            </span>
+                                            <span className="filter-text">
+                                                Distance
+                                            </span>
+                                        </Button>
+                                        <Button 
+                                            className="filter-button"
+                                            onClick={this.openRegionFilter}>
+                                            <span className="filter-icon">
+
+                                            </span>
+                                            <span className="filter-text">
+                                                Region
+                                            </span>
+                                        </Button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            {this.state.postalOpen && 
+
+                            <PostalForm 
+                                handleMarkers={this.handleMarkers}
+                                closeContainer={this.closePostalFilter} />
+                            }
+
+                            
+                            {this.state.regionOpen &&
                             <div className="region-selector-container">
                                 <RegionSelector setRegion={this.setRegion} />
                              </div>
+                            }
+
 
                     <div className="card-loop">
                  

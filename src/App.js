@@ -69,8 +69,8 @@ class App extends React.Component {
                         <div className="container">
                       
                      
-                             <h1 className="homepage-heading">GTA Assessment Centre Lines</h1>
-                             <p className="heading-details">Live crowd-sourced wait times from fellow Torontonians in line</p>
+                             <h1 className="homepage-heading">GTA Assessment Centre Directory</h1>
+                             <p className="heading-details">Info for appointment bookings across multiple regions</p>
                         </div>
 
                         

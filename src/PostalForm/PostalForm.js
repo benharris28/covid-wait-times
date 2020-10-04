@@ -44,6 +44,10 @@ class PostalForm extends React.Component {
             postal: postal
         })
     }
+
+    closeContainer = () => {
+        this.props.closeContainer()
+    }
     
     render() {
        
@@ -60,14 +64,19 @@ class PostalForm extends React.Component {
 
     <div className="container-2">
     <div className="cta-banner-dark">
+        <Button 
+            className="close-container-button"
+            onClick={this.closeContainer}>
+            Close
+        </Button>
         <div className="input-container">
         <div className="input-label-box">
         <h4 className="input-title">Optional: Enter your postal code to sort centres by distance</h4>
         {this.state.error &&
-        <p>{this.state.error}</p>
+        <p className="error-text">{this.state.error}</p>
         }
         {this.state.success &&
-        <p>Sorted!</p>
+        <p className="success-text">Sorted!</p>
         }
         </div>
         <div className="centre-finder-input-box">

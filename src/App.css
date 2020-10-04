@@ -29,6 +29,66 @@ h2 {
   line-height: 1.2;
 }
 
+/* Filter */
+
+.filter-title {
+  text-align: center;
+}
+.close-container-button {
+  background: 0 0;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.filter-toolbar {
+  height: 66px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 6%;
+    
+}
+
+.filter-toolbar-flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;;
+  -ms-flex-pack: space-around;;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 500px;
+
+}
+
+.filter-button {
+  
+    outline: none;
+    min-width: auto;
+    width: 120px;
+   
+    text-align: center;
+}
 
 .container-2 {
 
@@ -40,6 +100,7 @@ h2 {
 }
 
 .cta-banner-dark {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,7 +113,7 @@ h2 {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 24px;
-  background-color: rgb(33, 42, 47);
+  background-color: #f8f8f8;
   background-image: url(https://assets.website-files.com/5e7adff…/5e7adff…_Pattern%20Shape.svg);
   background-position: 50% 50%;
   background-size: cover;
@@ -520,6 +581,15 @@ font-weight: 400;
 }
 
 /* Postal Form */ 
+.success-text {
+  color: green;
+  font-weight: 600;
+}
+
+.error-text {
+  color: red;
+  font-weight: 600;
+}
 
 .input-container {
   display: flex;
@@ -553,7 +623,7 @@ font-weight: 400;
 }
 
 .input-title {
-  color: white;
+  color: #212a2f;
 }
 
 .input-button-container {
@@ -716,6 +786,7 @@ font-weight: 400;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .form-label {
@@ -865,6 +936,33 @@ font-weight: 400;
     
   }
 
+  /* Filter */ 
+
+  .close-container-button {
+    background: 0 0;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    outline: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .filter-button {
+  
+    outline: none;
+    min-width: auto;
+    width: 180px;
+   
+    text-align: center;
+}
+
   /* Postal Form */
 
   .input-container {
@@ -928,7 +1026,7 @@ font-weight: 400;
   -ms-flex-align: center;
   align-items: center;
   border-radius: 24px;
-  background-color: rgb(33, 42, 47);
+  background-color: #f8f8f8;
 
   background-position: 50% 50%;
   background-size: cover;
