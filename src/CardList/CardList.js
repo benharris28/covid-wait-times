@@ -22,12 +22,9 @@ class CardList extends React.Component {
       }
     
       refreshData = () => {
-        const today = dayjs();
-        const date = dayjs(today).format('YYYY-MM-D')
-        const hour = dayjs(today).format('HH')
+      
         
-        WaitApiService.getAllWaits(date, hour)
-           
+        WaitApiService.getLocations()
             .then(res => {
               this.setWaits(res)
             
@@ -49,7 +46,7 @@ class CardList extends React.Component {
 
       handleMarkers = (markers) => {
           this.setState({
-              sortableSites: markers
+              waitTimes: markers
           })
       }
       
@@ -106,8 +103,8 @@ class CardList extends React.Component {
                              </div>
 
                     <div className="card-loop">
-                    {zeroCheck.length === 0 && <p>No wait times posted yet</p>}
-                    {zeroCheck.length > 0 && filterCheck.length > 0 && this.state.waitTimes.filter(w => w.avg_wait && this.state.regions.includes(w.region)).map(wait => 
+                 
+                    {this.state.waitTimes.filter(w => this.state.regions.includes(w.region)).map(wait => 
                          
                         
                    
@@ -117,9 +114,13 @@ class CardList extends React.Component {
                          <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
             
                          <div className="product-item">
+                         {wait.distance && 
                          <div className="submissions-bar">
-                             <p className="submission-text">Test</p>
+                             
+                             <p className="submission-text">{Math.round(wait.distance)} km from you</p>
+                             
                          </div>
+                         }
                            
                            <div className="shop-product-clickable-details">
                           
@@ -136,7 +137,13 @@ class CardList extends React.Component {
                        <a target='_blank' rel="noopener noreferrer" href={`${wait.address_link}`}>
                            <p className="shop-product-detail">{wait.address}</p>
                             </a>
+                            <a target='_blank' rel="noopener noreferrer" href={`${wait.link}`}>
+                            <Button className="appt-button">
+                               Appointment link
+                           </Button>
+                           </a>
                        </div>
+                
                    
                        <div className="shop-product-quick-add-box">
                

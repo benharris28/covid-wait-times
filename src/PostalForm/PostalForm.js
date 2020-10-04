@@ -6,11 +6,16 @@ class PostalForm extends React.Component {
     state = {
         postal: '',
         markers: '',
+        error: '',
+        success: ''
     }
 
     handleSubmit = () => {
         MapApiService.getGeocode(this.state.postal)
             .then(res => {
+
+                if(res.results.length > 0) {
+
                 console.log(res)
                 const lat = res.results[0].geometry.location.lat
                 const lng = res.results[0].geometry.location.lng
@@ -20,7 +25,17 @@ class PostalForm extends React.Component {
                 MapApiService.getMarkers(lat, lng)
                     .then(markers => {
                         this.props.handleMarkers(markers)
+                        this.setState({
+                            success: true
+                        })
                     })
+                }
+
+                else {
+                    this.setState({
+                        error: 'Could not find postal code - cannot sort list by distance. You can still view the full list of sites below'
+                    })
+                }
             })
     }
 
@@ -32,7 +47,7 @@ class PostalForm extends React.Component {
     
     render() {
        
-
+        console.log(this.state)
         return(
             <div>
                
@@ -48,6 +63,12 @@ class PostalForm extends React.Component {
         <div className="input-container">
         <div className="input-label-box">
         <h4 className="input-title">Optional: Enter your postal code to sort centres by distance</h4>
+        {this.state.error &&
+        <p>{this.state.error}</p>
+        }
+        {this.state.success &&
+        <p>Sorted!</p>
+        }
         </div>
         <div className="centre-finder-input-box">
          
