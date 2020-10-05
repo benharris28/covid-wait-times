@@ -10,6 +10,8 @@ import ReactGA from 'react-ga';
 import line_hero from './Assets/line_hero.jpg'
 import { Route, Switch } from 'react-router-dom'
 import Loader from './Loader/Loader';
+import { Button } from 'antd';
+
 
 ReactGA.initialize('UA-178937311-1');
 
@@ -78,8 +80,24 @@ class App extends React.Component {
                 </div>
          
 
-             
-                    <CardList waitTimes={this.state.waitTimes}/>
+                <div className="content-section">
+                    <div className="content-container">
+                        
+
+                <div className="redirect-link">
+                  <p className="heading">Appointments</p>
+                  <p>As of Sunday, October 4th, all assessment centres in Ontario have moved to appointment bookings and will not accept walk-ins</p>
+                  <p>For a full list of assessment centres and links to book appointments, please see the Government of Ontario Website below</p>
+                  
+                  <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/assessment-centre-locations/">
+                  <Button className="redirect-button">
+                    Go to site
+                  </Button>
+                  </a>
+                </div>
+                </div>
+                </div>
+                   
                     <Footer />
                     </Route>
                    

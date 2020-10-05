@@ -582,6 +582,33 @@ font-weight: 400;
   height: 40px;
 }
 
+.redirect-link {
+  max-width: 700px;
+  margin: auto;
+}
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.redirect-button {
+  display: inline-block;
+  height: 52px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 13px 18px;
+  font-weight: 600;
+  border: 2px solid #212a2f;
+  border-radius: 2px;
+  color: #212a2f;
+  background-color: #fff;
+  transition: color .25s ease-out,background-color .25s ease-out,border-color .25s ease-out;
+  margin-top: 30px;
+}
+
+
 .button-box {
   margin-top: 30px;
   display: flex;
