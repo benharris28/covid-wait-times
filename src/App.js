@@ -46,6 +46,12 @@ class App extends React.Component {
     })
   }
   
+  handleExternalButtonClick = (link) => {
+    ReactGA.event({
+      category: `External Link - ${link}`,
+      action: `Clicked ${link}`,
+    });
+  }
 
   render() {
 
@@ -90,7 +96,7 @@ class App extends React.Component {
                   <p>For a full list of assessment centres and links to book appointments, please see the Government of Ontario Website below</p>
                   
                   <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/assessment-centre-locations/">
-                  <button className="landing-button">
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
                     Go to site
                   </button>
                   </a>
@@ -104,7 +110,7 @@ class App extends React.Component {
                 <h2 className="section-heading">Track Canada's Vaccination Effort</h2>
                  <p className="section-subheading">Our friends at The Peak have a daily vaccine tracker for Ontario and all provinces in Canada (We love the peak - we don't receive any considerations for highlighting them)</p>
                  <a target='_blank' rel="noopener noreferrer" href="https://vaccine.readthepeak.com/">
-                  <button className="landing-button">
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Peak")}>
                     Check it out
                   </button>
                   </a>
