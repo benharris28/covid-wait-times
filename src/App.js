@@ -78,7 +78,7 @@ class App extends React.Component {
                       
                      
                              <h1 className="homepage-heading">COVID WAITS</h1>
-                             <p className="heading-details">Live crowd-sourced wait times from fellow Torontonians in line</p>
+                             <p className="heading-details">Resources to speed up your Covid Assessment</p>
                         </div>
 
                         

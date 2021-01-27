@@ -47,6 +47,13 @@ h2 {
   flex-wrap: nowrap;
 }
 
+.logo-box {
+  width: 200px;
+}
+
+.logo {
+  width: 100%;
+}
 .landing-container {
   padding: 4vw;
   text-align: left;
@@ -219,8 +226,8 @@ h2 {
   padding: 0 20px;
   top: 0px;
   overflow: auto;
-  color: white;
-  background-color: rgb(255, 133, 119);;
+  color: #1E1F32;
+  background-color: #E9E9E9;
   height: auto;
   z-index: 10;
   display: flex;
@@ -230,6 +237,8 @@ h2 {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: left;
+  height: 80px;
+  z-index: 100;
 }
 
 .nav-icon {
@@ -272,7 +281,7 @@ h2 {
 
 .homepage-hero {
   position: relative;
-  height: calc(85vh - 60px);
+  height: 95vh;
   min-height: 500px;
 }
 
@@ -282,13 +291,13 @@ background-color: rgb(245, 245, 245);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% 50%;
-  opacity: 0.7;
+  opacity: 0.3;
 }
 
 .homepage-hero-heading {
   z-index: 10;
   position: absolute;
-  top: 80%;
+  top: 70%;
   right: 0;
   left: 0;
   padding: 0 10px;
@@ -297,7 +306,7 @@ background-color: rgb(245, 245, 245);
 }
 
 .homepage-heading {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
   
@@ -854,8 +863,6 @@ font-weight: 400;
     padding: 0 20px;
     top: 0px;
     overflow: auto;
-    color: white;
-    background-color: rgb(255, 133, 119);;
     height: auto;
     z-index: 10;
     display: flex;
@@ -865,6 +872,8 @@ font-weight: 400;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
+    height: 80px;
+    z-index: 100;
   }
   
   .nav-icon {
@@ -875,9 +884,21 @@ font-weight: 400;
 
   .homepage-hero {
     position: relative;
-    height: calc(95vh - 60px);
+    height: 95vh;
     min-height: 500px;
   }
+
+
+.homepage-hero-heading {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  text-align: center;
+}
 
   .section-heading {
     font-size: 36px;
@@ -890,7 +911,7 @@ font-weight: 400;
   }
   
   .homepage-heading {
-    font-size: 48px;
+    font-size: 80px;
     font-weight: 700;
     line-height: 1.2;
     
