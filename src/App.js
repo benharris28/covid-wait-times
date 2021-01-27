@@ -71,7 +71,7 @@ class App extends React.Component {
                         <div className="container">
                       
                      
-                             <h1 className="homepage-heading">GTA Assessment Centre Lines</h1>
+                             <h1 className="homepage-heading">COVID WAITS</h1>
                              <p className="heading-details">Live crowd-sourced wait times from fellow Torontonians in line</p>
                         </div>
 
@@ -80,7 +80,7 @@ class App extends React.Component {
                 </div>
          
 
-                <div className="content-section">
+                <div className="content-section very-light-grey">
                     <div className="content-container center">
                         
 
@@ -90,9 +90,9 @@ class App extends React.Component {
                   <p>For a full list of assessment centres and links to book appointments, please see the Government of Ontario Website below</p>
                   
                   <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/assessment-centre-locations/">
-                  <Button className="redirect-button">
+                  <button className="landing-button">
                     Go to site
-                  </Button>
+                  </button>
                   </a>
                 </div>
                 </div>
@@ -104,9 +104,9 @@ class App extends React.Component {
                 <h2 className="section-heading">Track Canada's Vaccination Effort</h2>
                  <p className="section-subheading">Our friends at The Peak have a daily vaccine tracker for Ontario and all provinces in Canada (We love the peak - we don't receive any considerations for highlighting them)</p>
                  <a target='_blank' rel="noopener noreferrer" href="https://vaccine.readthepeak.com/">
-                  <Button className="redirect-button">
+                  <button className="landing-button">
                     Check it out
-                  </Button>
+                  </button>
                   </a>
                 </div>
                 <div className="landing-container peak-green">
