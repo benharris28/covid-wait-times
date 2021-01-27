@@ -81,11 +81,11 @@ class App extends React.Component {
          
 
                 <div className="content-section">
-                    <div className="content-container">
+                    <div className="content-container center">
                         
 
                 <div className="redirect-link">
-                  <p className="heading">Appointments</p>
+                  <h2 className="section-heading">Assessment Appointments</h2>
                   <p>As of Sunday, October 4th, all assessment centres in Ontario have moved to appointment bookings and will not accept walk-ins</p>
                   <p>For a full list of assessment centres and links to book appointments, please see the Government of Ontario Website below</p>
                   
@@ -96,6 +96,24 @@ class App extends React.Component {
                   </a>
                 </div>
                 </div>
+                </div>
+             
+                <div className="landing-flex-container">
+                <div className="landing-container">
+                <img className="peak-logo" src="https://res.cloudinary.com/dhkmle6ei/image/upload/v1611717879/peaklogo_pdrtt3.png" alt="The Peak Logo" />
+                <h2 className="section-heading">Track Canada's Vaccination Effort</h2>
+                 <p className="section-subheading">Our friends at The Peak have a daily vaccine tracker for Ontario and all provinces in Canada (We love the peak - we don't receive any considerations for highlighting them)</p>
+                 <a target='_blank' rel="noopener noreferrer" href="https://vaccine.readthepeak.com/">
+                  <Button className="redirect-button">
+                    Check it out
+                  </Button>
+                  </a>
+                </div>
+                <div className="landing-container peak-green">
+                    <img className="landing-image" src="https://res.cloudinary.com/dhkmle6ei/image/upload/v1611717872/peakiphone_s2j7xh.png" alt="The Peak Screenshot" />
+                 
+                </div>
+                
                 </div>
                    
                     <Footer />

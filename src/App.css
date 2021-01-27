@@ -13,10 +13,19 @@
   background-color: #f8f8f8;
 }
 
+
+.peak-green {
+  background-color: #1CC468;
+}
+
+.center {
+  text-align: center;
+}
+
 .content-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  padding: 100px 3%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding: 70px 3%;
 }
 
 body {
@@ -29,6 +38,73 @@ h2 {
   line-height: 1.2;
 }
 
+.landing-flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.landing-container {
+  padding: 4vw;
+  text-align: left;
+}
+
+.landing-column-content {
+  text-align: left;
+}
+
+.landing-sub-heading {
+  font-size: 18px;
+  color: #838888;
+}
+
+
+.landing-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.landing-heading {
+  margin-top: 10px;
+  font-size: 36px;
+  line-height: 45px;
+ 
+  font-family: 'Anton', sans-serif;
+
+}
+
+.section-heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 40px;
+  color: #121212;
+  font-family: 'Anton', sans-serif;
+  margin-bottom: 28px;
+  margin-top: 16px;
+}
+
+.landing-button {
+  padding: 11px 21px;
+  border-radius: 2px;
+  background-color: transparent;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  background-color: #FF5733;
+  color: white;
+  font-size: 18px;
+  margin-top: 30px;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.peak-logo {
+  width: 300px;
+  margin-bottom: 50px;
+}
+
 
 .container-2 {
 
@@ -37,6 +113,21 @@ h2 {
     margin-right: auto;
     margin-left: auto;
   
+}
+
+.colour-block {
+    background: #1CC468;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}
+
+.colour-block-triangle {
+  background: #1CC468;
+  width: 300px;
+  transform: skew(-10deg); 
+  height: 100%;
+  z-index: 1;
 }
 
 .cta-banner-dark {
@@ -804,6 +895,25 @@ font-weight: 400;
 }
 
 @media(min-width: 1000px) {
+
+  .landing-container {
+    width: 50%;
+}
+
+.landing-flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.invert {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.landing-image-container {
+    width: 50%;
+}
 
 .shop-product-card {
   width: calc(50% - 30px);
