@@ -327,10 +327,12 @@ background-color: rgb(245, 245, 245);
 }
 
 .homepage-heading {
-  font-size: 40px;
+  font-size: 36px;
+
   font-weight: 700;
   line-height: 1.2;
   font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
   
 }
 
