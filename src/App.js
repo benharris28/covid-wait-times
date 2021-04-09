@@ -122,7 +122,7 @@ class App extends React.Component {
                 cover={<img alt="Peak Logo" src="https://res.cloudinary.com/dhkmle6ei/image/upload/v1617981588/Screen_Shot_2021-04-09_at_11.19.33_AM_rzdpk9.png" />}
               >
                 <Meta title="Canada Vaccine Tracker" description="Up to date info on Canada's Vaccine Rollout" />
-                <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/ontarios-covid-19-vaccination-plan">
+                <a target='_blank' rel="noopener noreferrer" href="https://vaccine.readthepeak.com/">
                   <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
                     Go to site
                   </button>
