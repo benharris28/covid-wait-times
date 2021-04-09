@@ -10,12 +10,13 @@ import ReactGA from 'react-ga';
 import line_hero from './Assets/line_hero.jpg'
 import { Route, Switch } from 'react-router-dom'
 import Loader from './Loader/Loader';
-import { Button } from 'antd';
+import { Button, Card } from 'antd';
 
 
 ReactGA.initialize('UA-178937311-1');
 
 class App extends React.Component {
+  
   
   
   state = {
@@ -54,6 +55,7 @@ class App extends React.Component {
   }
 
   render() {
+    const { Meta } = Card;
 
     return (
       <div className="app">
@@ -69,21 +71,69 @@ class App extends React.Component {
 
         
         <Navbar />
-        <div className="homepage-hero">
-                    <div className="homepage-hero-image" style={{ backgroundImage: `url(${line_hero})`}}>
+       <div className="content-section">
+         <div className="content-container center">
+           <div className="icon">
+             Covid Waits
+           </div>
+           <div className="homepage-hero-heading">
+         <h1 className="homepage-heading">Tools to navigate assessments, vaccine eligibity, and vaccine tracking</h1>
+   
+         </div>
+         <div>
+         
+         </div>
+         </div>
+       </div>
 
-                    </div>
-                    <div className="homepage-hero-heading">
-                        <div className="container">
-                      
-                     
-                             <h1 className="homepage-heading">COVID WAITS</h1>
-                             <p className="heading-details">Resources to speed up your Covid Assessment</p>
-                        </div>
+       <div className="content-section">
+         <div className="content-container">
+            <div className="card-box">
+              
+              <Card
+                hoverable
+           
+                cover={<img alt="nasal swab" src="https://res.cloudinary.com/dhkmle6ei/image/upload/v1617980509/Screen_Shot_2021-04-09_at_11.00.26_AM_poq3if.png" />}
+              >
+                <Meta title="Covid Assessment Info" description="Latest info on where to get a covid test" />
+                <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/assessment-centre-locations/">
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
+                    Go to site
+                  </button>
+                  </a>
+              </Card>
 
-                        
-                    </div>
-                </div>
+              <Card
+                hoverable
+       
+                cover={<img alt="vaccine" src="https://res.cloudinary.com/dhkmle6ei/image/upload/v1617980507/Screen_Shot_2021-04-09_at_11.01.00_AM_l0ilm5.png" />}
+              >
+                <Meta title="Vaccine Eligibility Info" description="Latest info on who is eligible for vaccination" />
+                <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/ontarios-covid-19-vaccination-plan">
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
+                    Go to site
+                  </button>
+                  </a>
+              </Card>
+
+              <Card
+                hoverable
+            
+                cover={<img alt="Peak Logo" src="https://res.cloudinary.com/dhkmle6ei/image/upload/v1617981588/Screen_Shot_2021-04-09_at_11.19.33_AM_rzdpk9.png" />}
+              >
+                <Meta title="Canada Vaccine Tracker" description="Up to date info on Canada's Vaccine Rollout" />
+                <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/ontarios-covid-19-vaccination-plan">
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
+                    Go to site
+                  </button>
+                  </a>
+              </Card>
+            </div>
+         </div>
+       </div>
+
+
+           
          
 
                 <div className="content-section very-light-grey">

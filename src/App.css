@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 .App {
   text-align: center;
@@ -21,8 +22,33 @@
   background-color: #1CC468;
 }
 
+.yellow {
+  background-color: #ffd400;
+}
+
 .center {
   text-align: center;
+}
+
+.icon {
+  width: 200px;
+  border: 2px solid #5e22e6;
+  background-color: #5e22e6;
+  border-radius: 10px;
+  margin: auto;
+  font-family: Poppins;
+  color: white;
+}
+
+.ant-card {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .content-section {
@@ -97,7 +123,7 @@ h2 {
   font-size: 36px;
   line-height: 45px;
  
-  font-family: 'Anton', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
 }
 
@@ -106,7 +132,7 @@ h2 {
   text-transform: uppercase;
   line-height: 40px;
   color: #121212;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin-bottom: 28px;
   margin-top: 16px;
 }
@@ -227,7 +253,7 @@ h2 {
   top: 0px;
   overflow: auto;
   color: #1E1F32;
-  background-color: #E9E9E9;
+  background-color: #ffd400;
   height: auto;
   z-index: 10;
   display: flex;
@@ -296,19 +322,15 @@ background-color: rgb(245, 245, 245);
 
 .homepage-hero-heading {
   z-index: 10;
-  position: absolute;
-  top: 70%;
-  right: 0;
-  left: 0;
   padding: 0 10px;
-  transform: translateY(-50%);
   text-align: center;
 }
 
 .homepage-heading {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
   
 }
 
@@ -857,7 +879,7 @@ font-weight: 400;
   }
 }
 
-@media(min-width: 700px) {
+@media(min-width: 830px) {
   .navbar{
     position: sticky;
     padding: 0 20px;
@@ -875,6 +897,16 @@ font-weight: 400;
     height: 80px;
     z-index: 100;
   }
+
+  .ant-card {
+    width: calc(33% - 20px)
+  }
+
+  .card-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   
   .nav-icon {
     margin-right: 10px;
@@ -891,13 +923,8 @@ font-weight: 400;
 
 .homepage-hero-heading {
   z-index: 10;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  padding: 0 10px;
-  transform: translateY(-50%);
   text-align: center;
+  margin-top: 50px;
 }
 
   .section-heading {
@@ -905,13 +932,13 @@ font-weight: 400;
     text-transform: uppercase;
     line-height: 40px;
     color: #121212;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 28px;
     margin-top: 16px;
   }
   
   .homepage-heading {
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
     
