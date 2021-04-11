@@ -110,7 +110,7 @@ class App extends React.Component {
               >
                 <Meta title="Vaccine Eligibility Info" description="Latest info on who is eligible for vaccination" />
                 <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/ontarios-covid-19-vaccination-plan">
-                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("vaccine")}>
                     Go to site
                   </button>
                   </a>
@@ -146,7 +146,7 @@ class App extends React.Component {
                   <p>For a full list of assessment centres and links to book appointments, please see the Government of Ontario Website below</p>
                   
                   <a target='_blank' rel="noopener noreferrer" href="https://covid-19.ontario.ca/assessment-centre-locations/">
-                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Assessment")}>
+                  <button className="landing-button" onClick={() => this.handleExternalButtonClick("Peak")}>
                     Go to site
                   </button>
                   </a>
